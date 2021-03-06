@@ -14,7 +14,7 @@ RUN npm install
 RUN npm install nodemon -g --quiet
 
 #bunble app source
-COPY . /usr/src/app
+COPY ./ ./
 
 EXPOSE 8383
 
