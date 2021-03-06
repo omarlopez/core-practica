@@ -1,0 +1,21 @@
+version: '2'
+services:
+  api:
+    build: ./api/
+    depends_on:
+      - db
+    command: nodemon api/app.js
+    ports:
+      - "8383:8383"
+    volumes:
+      - ./api/:/app
+
+  db:
+    image: mongo
+    expose:
+      - "27017"
+    volumes:
+      - mongodata:/data/db
+
+volumes:
+  mongodata:
