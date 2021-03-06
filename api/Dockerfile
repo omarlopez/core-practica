@@ -5,7 +5,7 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 #install app dependencies
-COPY ./package.json /usr/src/app/
+COPY package.json ./
 RUN npm install
 
 # istalacion de nodemon en forma global
