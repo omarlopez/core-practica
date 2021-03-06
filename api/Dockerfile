@@ -2,7 +2,7 @@ FROM node:12.18.1
 
 #create app directory
 RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR ./app
 
 #install app dependencies
 COPY package.json ./
